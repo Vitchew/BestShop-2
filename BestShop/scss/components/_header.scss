@@ -1,0 +1,63 @@
+//@import '../general/reset';
+//@import "../settings/colors";
+//@import "../settings/mixins";
+//@import "../settings/buttons";
+
+.main {
+  background-color: $color-white;
+  width: 100%;
+  padding-top: 12.5rem;
+
+}
+
+.main_container {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  img {
+    display: flex;
+    justify-content: center;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+  }
+
+}
+
+.main_container h1 {
+  @include font("Raleway", 3.065rem, 300, 3.5625rem, $color-black);
+  text-align: center;
+}
+
+.main_p {
+  padding: 1.25rem 0 2.375rem;
+  @include font("Open Sans", 1rem, 300, 1.375rem, $color-black);
+  text-align: center;
+}
+
+.btn_main {
+  @include button(27.5rem, 4.1875rem, $color-primary, 2.5rem);
+  @include font("Open Sans", 1rem, 700, 1.375rem, $color-white);
+  box-shadow: $color-primary-shadow 5px 10px 14px;
+  &:hover {
+    cursor: pointer;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .main {
+    height: auto;
+    padding-top: 8rem;
+    img {
+      height: 100%;
+      width: 100%;
+      object-fit: cover;
+    }
+  }
+  .btn_main {
+    width: 90%;
+    margin: 0;
+    height: 3rem;
+  }
+}

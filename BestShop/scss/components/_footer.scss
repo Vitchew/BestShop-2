@@ -1,0 +1,52 @@
+.footer {
+
+  background: var(--color-white);
+  box-shadow: #00000029 0 -5px 40px;
+
+}
+
+.footer_container {
+
+  margin: 0 auto;
+  height: 100%;
+  max-width: 1352px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 21px 0 17px;
+
+}
+
+.last_logo {
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 300;
+  font-size: 26px;
+  line-height: 30px;
+  color: $color-primary;
+  margin-bottom: 6px;
+
+}
+
+.rights {
+
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 11px;
+  line-height: 15px;
+  color: $color-gray;
+}
+
+.icons :nth-child(2) {
+  margin-left: 20px;
+}
+
+@media (max-width: $breakpoint-md) {
+  .footer_container {
+    max-height: 5.5125rem;
+    width: 90%;
+    padding: 1rem;
+    align-items: center;
+    //text-align: center;
+  }
+}

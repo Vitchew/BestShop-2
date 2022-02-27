@@ -1,0 +1,112 @@
+@import '../general/reset';
+@import "../settings/colors";
+@import "../settings/mixins";
+@import "../settings/buttons";
+
+.stats {
+  background: $color-white;
+  max-width: 100%;
+  padding: 6.25rem 0;
+}
+
+.stats_container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.stats_head {
+  @include font("Raleway", 2.25rem, 300, 2.625rem, $color-black);
+  padding-bottom: 6.25rem;
+}
+
+.stats_wrapper {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  //flex-wrap: wrap;
+}
+
+.stat {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  justify-content: space-between;
+  width: 11rem;
+  height: 10.4375rem;
+  padding-bottom: 1.25rem;
+  h3 {
+    @include font("Raleway", 1.25rem, 800, 1.5rem, $color-black);
+    letter-spacing: 0.375rem;
+  }
+  p {
+    @include font("Raleway", 1rem, 300, 1.1875rem, $color-gray);
+    text-align: center;
+  }
+}
+
+.eye {
+  margin: 0 11.4375rem;
+}
+.img {
+  display: flex;
+  justify-content: center;
+  padding-bottom: 0.875rem;
+}
+.stat img {
+  position: relative;
+  z-index: 2;
+}
+
+.eye img{
+  left: 30%;
+  top: 30%;
+}
+.img:before {
+    content: "";
+    position: absolute;
+    width: 3.9375rem;
+    height: 3.9375rem;
+    border-radius: 50%;
+    display: block;
+    background: $color-primary;
+    z-index: 1;
+}
+.person {
+  display: flex;
+  align-items: center;
+  img {
+    left: 60%;
+  }
+  .img:before {
+    background: $color-redish;
+  }
+}
+
+.catalog {
+  display: flex;
+  align-items: center;
+  img {
+    left: 60%;
+  }
+  .img:before {
+    background: $color-green;
+  }
+}
+
+@media (max-width: $breakpoint-md) {
+  .stats {
+    padding-bottom: 1rem;
+  }
+  .stats_head {
+    text-align: center;
+    padding-bottom: 2rem;
+  }
+  .stats_wrapper {
+    flex-direction: column;
+    width: 100%;
+    align-items: center;
+  }
+}

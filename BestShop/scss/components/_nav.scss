@@ -1,0 +1,174 @@
+@import '../general/reset';
+@import "../settings/colors";
+@import "../settings/mixins";
+@media (max-width: $breakpoint-md) {
+  .nav {
+    position: relative;
+    z-index: 4;
+  }
+  .nav_container {
+    height: 100%;
+    width: 100%;
+    box-shadow: $color-gray 0 3px 6px;
+    //position: relative;
+    z-index: 3;
+
+
+
+    .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin: 0 0.5rem;
+
+    }
+    #menu {
+      appearance: none;
+      display:none;
+
+      &:checked {
+
+        ~ nav > .nav_list {
+          opacity: 100%;
+          transform: translateY(100%);
+        }
+
+        ~ .menu {
+          transform: translateX(-4px);
+          span {
+
+            &:nth-child(1) {
+              transform-origin: center;
+              transform: rotate(135deg) translate(0, -8px);
+
+            }
+            &:nth-child(2) {
+              opacity: 0;
+            }
+            &:nth-child(3) {
+              transform-origin: center;
+              transform: rotate(-135deg) translate(0, 8px) ;
+            }
+          }
+        }
+      }
+    }
+    .menu {
+      cursor: pointer;
+      position: absolute;
+      left: 85%;
+    }
+    span {
+      width: 1.4rem;
+      height: 0.15rem;
+      display: block;
+      margin-bottom: 0.2rem;
+      border-radius: 2px;
+      background-color: $color-primary;
+      transition: 0.2s ease-in-out;
+
+    }
+    .nav_list {
+      //display: flex;
+      position: absolute;
+      //left: -100%;
+      z-index: -4;
+      transition: 0.4s ease-in-out;
+      top: -100%;
+      opacity: 0;
+      left: 0;
+      flex-direction: column;
+      background-color: $color-white;
+      width: 100%;
+      height: 200%;
+      box-shadow: $color-primary-shadow 2px 2px;
+      padding-bottom: 20px;
+      //padding-left: 4rem;
+      //text-align: center;
+    }
+    .nav_list li {
+      margin-bottom: 0.4rem;
+      margin-left: 2rem;
+      padding: 0.5rem;
+    }
+    .nav_list a {
+      @include font("Open Sans", 0.6875rem, 700, 0.9375rem, $color-gray);
+      letter-spacing: 3.28px;
+      text-decoration: none;
+      padding: 0.3rem 0.75rem;
+      cursor: pointer;
+      &:hover {
+        color: $color-black;
+        font-weight: 700;
+      }
+    }
+    .logo {
+      @include font("Raleway", 2rem, 300, 2.3125rem, $color-primary);
+      padding: 1.0625rem;
+      position: relative;
+    }
+  }
+}
+
+  @media (min-width: $breakpoint-md) {
+    #menu {
+      appearance: none;
+      display: none;
+      position: -999999;
+    }
+    .nav {
+      position: absolute;
+      width: 100%;
+      box-shadow: $color-gray 0 3px 6px;
+
+      .nav_container {
+        max-width: 84.5rem;
+        margin: 0 auto;
+        //display: flex;
+        //justify-content: space-between;
+        //align-items: center;
+      }
+    }
+    .wrap {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .logo {
+      @include font("Raleway", 2rem, 300, 2.3125rem, $color-primary);
+      padding: 1.0625rem;
+
+    }
+
+    .nav_list {
+      display: flex;
+      list-style: none;
+      padding-right: 1rem;
+
+      li {
+        //display: flex;
+        //justify-content: center;
+        //align-items: center;
+      }
+    }
+
+    .nav_list a {
+      @include font("Open Sans", 0.6875rem, 700, 0.9375rem, $color-gray);
+      letter-spacing: 3.28px;
+      text-decoration: none;
+      padding: 1.65rem 0.75rem;
+      cursor: pointer;
+      margin-left: 4.6875rem;
+      border-bottom: 4px solid transparent;
+
+      &:hover {
+        border-bottom: 4px solid $color-primary;
+        color: $color-black;
+        font-weight: 700;
+      }
+    }
+  }
+
+
+

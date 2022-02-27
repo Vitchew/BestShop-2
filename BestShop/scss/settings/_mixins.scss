@@ -1,0 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;700&family=Raleway:wght@300;400;700;800&display=swap');
+
+@mixin font($fontFamily, $fontSize, $fontWeight, $lineHeight, $color){
+  font-family: $fontFamily, sans-serif;
+  font-size: $fontSize;
+  font-weight: $fontWeight;
+  line-height: $lineHeight;
+  color: $color;
+}
+
+@mixin button($width, $height, $color, $radius){
+  width: $width;
+  height: $height;
+  background-color: $color;
+  border-radius: $radius;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-decoration: none;
+}
+
+$container-width: 1353px;
+$breakpoint-sm: 736px;
+$breakpoint-md: 980px;
+$breakpoint-lg: 1280px;
+$breakpoint-xl: 1680px;

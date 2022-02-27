@@ -1,0 +1,198 @@
+.contact {
+
+  background: $color-white;
+
+}
+
+.contact_container {
+
+  margin: 0 auto 60px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+
+
+}
+
+.contact_main {
+
+  margin-right: 114px;
+
+}
+.contact_main h3 {
+
+  font-family: "Raleway", sans-serif;
+  font-weight: 400;
+  font-size: 49px;
+  line-height: 57px;
+  margin-bottom: 22px;
+
+}
+
+.info {
+
+  font-family: "Open Sans", sans-serif;
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 22px;
+  margin-bottom: 42px;
+
+}
+
+.email_phone p {
+
+  font-family: "Open-Sans", sans-serif;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  color: $color-gray;
+  display: inline-block;
+
+}
+
+.email,
+.phone {
+  margin: 0 10px;
+}
+
+.form {
+  max-width: 440px;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 0;
+}
+
+.form_inputs {
+  display: flex;
+  flex-direction: column;
+}
+
+.form_inputs label {
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 11px;
+  line-height: 15px;
+  letter-spacing: 3px;
+  color: $color-primary;
+  margin-bottom: 10px;
+
+}
+
+.form_inputs input {
+  border: transparent;
+  border-bottom: 1px solid $color-gray;
+  margin-bottom: 20px;
+}
+
+
+.form_inputs input:focus {
+
+  border-bottom: 1px solid $color-primary;
+  box-shadow: $color-primary 0 5px 5px -5px;
+
+}
+
+.checkbox {
+
+  display: flex;
+  justify-content: space-between;
+  margin-bottom: 20px;
+
+}
+
+.checkbox_container {
+  display: flex;
+}
+.check {
+
+  width: 0;
+  height: 0;
+  display: none;
+  position: absolute;
+  opacity: 0;
+
+}
+
+
+
+.check_custom {
+
+  width: 24px;
+  height: 24px;
+  border: 1px solid $color-gray;
+  display: inline-block;
+  border-radius: 4px;
+  //margin-right: 10px;
+  position: relative;
+  cursor: pointer;
+
+}
+
+.check_custom:hover {
+  box-shadow: rgba(6, 24, 44, 0.4) 0 0 0 2px, rgba(6, 24, 44, 0.65) 0 4px 6px -1px, rgba(255, 255, 255, 0.08) 0 1px 0px inset;
+}
+
+.check:checked ~ .check_custom {
+
+  background: url("../assets/Checkmark.svg") no-repeat center/cover;
+  background-size: 50%;
+
+}
+
+.checkbox_text {
+  font-family: "Open Sans", sans-serif;
+  display: inline-block;
+  font-weight: 400;
+  font-size: 12px;
+  line-height: 17px;
+  color: $color-gray;
+}
+
+.send {
+
+  align-self: flex-end;
+  text-decoration: none;
+  width: 10%;
+  height: auto;
+  background: $color-primary;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 700;
+  font-size: 13px;
+  color: $color-white;
+  line-height: 18px;
+  //text-align: center;
+  padding: 20px 90px;
+  border-radius: 35px;
+  box-shadow: $color-primary-shadow 5px 10px 14px;
+
+}
+
+@media (max-width: $breakpoint-md) {
+  .contact {
+    width: 100%;
+  }
+  .contact_container {
+    flex-direction: column;
+    align-items: center;
+    //padding: 0 2rem;
+    max-width: 90%;
+    width: 100%;
+    margin: 2rem 0;
+  }
+  .contact_main {
+    width: 90%;
+    padding-left: 1rem;
+    margin: 0;
+
+  }
+  .form {
+    max-width: 90%;
+    width: 100%;
+   padding-left: 1rem;
+    padding-top: 1rem;
+  }
+  .send {
+    width: 10%;
+    height: auto;
+  }
+}
